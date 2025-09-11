@@ -5,7 +5,7 @@ export interface IUser extends Document{
   password:string,
   user_image:string,
   email:string,
-  phone_number:bigint
+  phone_number:string
 }
 
 const UserSchema:Schema = new Schema({
@@ -29,7 +29,7 @@ const UserSchema:Schema = new Schema({
     unique:true,
   },
   phone:{
-    type:BigInt,
+    type:String,
     required:true,
     unique:true
   }
